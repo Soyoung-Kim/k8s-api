@@ -19,7 +19,7 @@ import com.sangminny.k8sapi.nds.mvc.domain.Echo;
 @RestController
 @RequestMapping("/nds/echo")
 public class EchoController {
-    
+
     @Value("${spring.profiles.active}")
     private String activeProfile;
 
@@ -41,4 +41,13 @@ public class EchoController {
         echo.setProfile(activeProfile);
         return echo;
     }
+
+    @GetMapping("/test")
+    public String getTestString() {
+
+        String result = "TestString";
+
+        return result;
+    }
+
 }

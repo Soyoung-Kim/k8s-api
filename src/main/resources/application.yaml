@@ -5,6 +5,9 @@ spring:
         # active: prod
         # active: ${activeProfile}
 ---
+server:
+    port: 80
+
 spring:
     config:
         activate:
@@ -12,12 +15,18 @@ spring:
 
 
 ---
+server:
+    port: 80
+
 spring:
     config:
         activate:
             on-profile: dev
 
 ---
+server:
+    port: 80
+
 spring:
     config:
         activate:
